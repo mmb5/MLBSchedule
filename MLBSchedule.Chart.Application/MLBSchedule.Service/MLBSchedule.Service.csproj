@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CDC18EA8-6DA6-47AD-9D66-B5323441C2D0}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{470DDCBC-6241-4D5E-81FC-EEBF9E679A0F}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MLBSchedule.Chart.Application</RootNamespace>
-    <AssemblyName>MLBSchedule.Chart.Application</AssemblyName>
+    <RootNamespace>MLBSchedule.Service</RootNamespace>
+    <AssemblyName>MLBSchedule.Service</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,20 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="ChartService.cs" />
+    <Compile Include="FileService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MBLSchedule.Model\MLBSchedule.Model.csproj">
       <Project>{ba55853f-43b2-4940-bd32-adaee1076f00}</Project>
       <Name>MLBSchedule.Model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MLBSchedule.Service\MLBSchedule.Service.csproj">
-      <Project>{470ddcbc-6241-4d5e-81fc-eebf9e679a0f}</Project>
-      <Name>MLBSchedule.Service</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
