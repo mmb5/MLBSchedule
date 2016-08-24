@@ -38,6 +38,21 @@ namespace MLBSchedule.Service
             return divisions;
         }
 
+        public Dictionary<int, string> ReadFormatPointerFile(string Filename)
+        {
+            var dict = new Dictionary<int, string>();
+            using (StreamReader sr = new StreamReader(Filename))
+            {
+                while (!sr.EndOfStream)
+                {
+                    var input = sr.ReadLine().Split(',');
+                    dict.Add(Convert.ToInt32(input[0]), input[1]);
+                }
+            }
+            return dict;
+
+        }
+
         private Game ParseGame(string Input)
         {
             var input = Input.Replace("\"", "");

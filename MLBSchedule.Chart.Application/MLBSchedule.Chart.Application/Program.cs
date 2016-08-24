@@ -13,20 +13,31 @@ namespace MLBSchedule.Chart.Application
     {
         static void Main(string[] args)
         {
-//            MakeChart(2016);
-            MakeChart(1949);
+            GetSummaries();
         }
 
-        static private void MakeChart(int year)
+        static private void GetSummaries()
         {
             var fileService = new FileService();
-            var schedule = fileService.ReadSchedule(@"C:\Personal\MLBSchedule\scheduleYYYY.txt".Replace("YYYY", year.ToString()));
-            var division = fileService.ReadFormatFile(@"C:\Personal\MLBSchedule\formatYYYY.txt".Replace("YYYY", year.ToString()));
+            var formats = fileService.ReadFormatPointerFile(@"C:\Personal\MLBSchedule\data\formatall.txt");
+            foreach (var y in formats.Where(k => (k.Key >= 1977) && (k.Key <= 1992)))
+            {
+                MakeChart(@"C:\Personal\MLBSchedule\data\YYYYsked.txt".Replace("YYYY", y.Key.ToString()),
+                          @"C:\Personal\MLBSchedule\data\FFILE".Replace("FFILE", y.Value.ToString()), y.Key);
+
+            }
+        }
+
+        static private void MakeChart(string ScheduleFile, string FormatFile, int Year)
+        {
+            var fileService = new FileService();
+            var schedule = fileService.ReadSchedule(ScheduleFile);
+            var division = fileService.ReadFormatFile(FormatFile);
 
             var chartService = new ChartService(schedule, division);
             var chart = chartService.Get();
 
-            using (StreamWriter sw = new StreamWriter(@"c:\personal\MLBSchedule\chartYYYY.html".Replace("YYYY", year.ToString())))
+            using (StreamWriter sw = new StreamWriter(@"c:\personal\MLBSchedule\data\chartYYYY.html".Replace("YYYY", Year.ToString())))
             {
                 sw.WriteLine("<html><style>td { font-family: Arial; font-size: 9pt; border-spacing: 0px; padding: 0px; border-collapse: collapse; } tr { border-spacing: 0px; padding: 0px; border-collapse: collapse; } table { border-spacing: 0px; padding: 0px; border-collapse: collapse; }</style><body>");
                 sw.WriteLine(chart);
