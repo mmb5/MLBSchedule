@@ -99,7 +99,7 @@ namespace MLBSchedule.Service
             }
             else
             {
-                throw new InvalidDataException($"Division record does not contain 3 fields: {Input}");
+                throw new InvalidDataException($"Division record does not contain 5 fields: {Input}");
             }
         }
 

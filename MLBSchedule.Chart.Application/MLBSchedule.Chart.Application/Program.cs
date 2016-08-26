@@ -20,7 +20,7 @@ namespace MLBSchedule.Chart.Application
         {
             var fileService = new FileService();
             var formats = fileService.ReadFormatPointerFile(@"C:\Personal\MLBSchedule\data\formatall.txt");
-            foreach (var y in formats.Where(k => (k.Key >= 1977) && (k.Key <= 1992)))
+            foreach (var y in formats.Where(k => (k.Key >= 1889) && (k.Key <= 1890)))
             {
                 MakeChart(@"C:\Personal\MLBSchedule\data\YYYYsked.txt".Replace("YYYY", y.Key.ToString()),
                           @"C:\Personal\MLBSchedule\data\FFILE".Replace("FFILE", y.Value.ToString()), y.Key);
@@ -34,8 +34,9 @@ namespace MLBSchedule.Chart.Application
             var schedule = fileService.ReadSchedule(ScheduleFile);
             var division = fileService.ReadFormatFile(FormatFile);
 
-            var chartService = new ChartService(schedule, division);
-            var chart = chartService.Get();
+            var dataService = new DataService(schedule, division);
+            var chartService = new ChartService();
+            var chart = chartService.Get(dataService);
 
             using (StreamWriter sw = new StreamWriter(@"c:\personal\MLBSchedule\data\chartYYYY.html".Replace("YYYY", Year.ToString())))
             {
