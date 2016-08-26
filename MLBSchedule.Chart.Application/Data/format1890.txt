@@ -1,0 +1,6 @@
+NLE,BSN|BRO|NY1|PHI,Boston|Brooklyn|New York|Philadelphia,BO|BR|NY|PH,CCFFCC
+NLW,CHN|CIN|CL4|PIT,Chicago|Cincinnati|Cleveland|Pittsburgh,CH|CI|CL|PI,CCCCFF
+AAE,BR4|PH4|RC2|SR2,Brooklyn|Philadelphia|Rochester|Syracuse,BR|PH|RO|SY,FFCCFF
+AAW,CL6|LS2|SL4|TL2,Columbus|Louisville|St. Louis|Toledo,CO|LO|SL|TO,FFFFCC
+PLE,BSP|BRP|NYP|PHP,Boston|Brooklyn|New York|Philadelphia,BO|BR|NY|PH,FFCCCC
+PLW,BFP|CHP|CLP|PTP,Buffalo|Chicago|Cleveland|Pittsburgh,BU|CH|CL|PI,CCFFFF

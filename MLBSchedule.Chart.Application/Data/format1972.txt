@@ -1,0 +1,4 @@
+ALE,BAL|BOS|CLE|DET|MIL|NYA,Baltimore|Boston|Cleveland|Detroit|Milwaukee|NY Yankees,BA|BO|CL|DE|ML|NY,CCFFFF
+ALW,CAL|CHA|KCA|MIN|OAK|TEX,California|Chicago WS|Kansas City|Minnesota|Oakland|Texas,CA|CW|KC|MN|OA|TX,FFFFCC
+NLE,CHN|MON|NYN|PHI|PIT|SLN,Chicago Cubs|Montreal|NY Mets|Philadelphia|Pittsburgh|St. Louis,CC|MT|NM|PH|PI|SL,CCFFCC
+NLW,ATL|CIN|HOU|LAN|SDN|SFN,Atlanta|Cincinnati|Houston|Los Angeles|San Diego|San Francisco,AT|CI|HO|LA|SD|SF,CCCCFF

@@ -1,0 +1,4 @@
+NLE,BSN|BRO|NY1|PHI,Boston|Brooklyn|New York|Philadelphia,BO|BR|NY|PH,CCFFCC
+NLW,CHN|CIN|CL4|PIT,Chicago|Cincinnati|Cleveland|Pittsburgh,CH|CI|CL|PI,CCCCFF
+AAE,BL3|BS2|PH4|WS9,Baltimore|Boston|Philadelphia|Washington,BA|BO|PH|WA,FFCCFF
+AAW,CN3|CL6|LS2|SL4,Cincnnati|Cleveland|Louisville|St. Louis,CI|CL|LO|SL,FFFFCC

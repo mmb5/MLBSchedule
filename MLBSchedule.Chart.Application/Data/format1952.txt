@@ -1,0 +1,4 @@
+ALE,BOS|NYA|PHA|WS1,Boston|NY Yankees|Philadelphia|Washington,BO|NY|PA|WA,CCFFFF
+ALW,CHA|CLE|DET|SLA,Chicago WS|Cleveland|Detroit|St. Louis,CW|CL|DE|SB,FFFFCC
+NLE,BSN|BRO|NY1|PHI,Boston|Brooklyn|NY Giants|Philadelphia,BB|BR|NG|PH,CCFFCC
+NLW,CHN|CIN|PIT|SLN,Chicago Cubs|Cincinnati|Pittsburgh|St. Louis,CC|CI|PI|SC,CCCCFF
