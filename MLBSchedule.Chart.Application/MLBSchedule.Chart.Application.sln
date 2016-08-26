@@ -11,6 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MLBSchedule.Service", "MLBS
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{668D4E1C-B62D-4469-A9E8-DE212B37E107}"
 	ProjectSection(SolutionItems) = preProject
+		.keep = .keep
 		..\..\..\MLBSchedule\data\1877sked.txt = ..\..\..\MLBSchedule\data\1877sked.txt
 		..\..\..\MLBSchedule\data\1878sked.txt = ..\..\..\MLBSchedule\data\1878sked.txt
 		..\..\..\MLBSchedule\data\1879sked.txt = ..\..\..\MLBSchedule\data\1879sked.txt
