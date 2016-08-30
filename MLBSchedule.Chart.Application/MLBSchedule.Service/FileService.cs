@@ -53,11 +53,28 @@ namespace MLBSchedule.Service
 
         }
 
+        public List<Team> ReadTeamFile(string Filename)
+        {
+            var list = new List<Team>();
+            using (StreamReader sr = new StreamReader(Filename))
+            {
+                while (!sr.EndOfStream)
+                {
+                    var input = sr.ReadLine().Split(',');
+                    var team = new Team();
+                    team.Franchise = input[0];
+                    team.Codes = input[1].Split('|').ToList();
+                    list.Add(team);
+                }
+            }
+            return list;
+        }
+
         private Game ParseGame(string Input)
         {
             var input = Input.Replace("\"", "");
             var fields = input.Split(',');
-            if (fields.Count() == 12)
+            if ((fields.Count() == 12) || (fields.Count() == 10))
             {
                 var game = new Game();
                 var visitor = new GameTeam();
@@ -73,13 +90,16 @@ namespace MLBSchedule.Service
                 home.League = fields[7];
                 home.GameNumber = Convert.ToInt32(fields[8]);
                 game.DayNight = fields[9];
-                game.Postponed = fields[10];
-                ConvertDate(fields[11], out game.Makeup);
+                if (fields.Count() >= 11)
+                {
+                    game.Postponed = fields[10];
+                    ConvertDate(fields[11], out game.Makeup);
+                }
                 return game;
             }
             else
             {
-                throw new InvalidDataException($"Schedule record does not contain 12 fields: {Input}");
+                throw new InvalidDataException($"Schedule record does not contain 10 or 12 fields: {Input}");
             }
         }
 
@@ -106,12 +126,15 @@ namespace MLBSchedule.Service
         private void ConvertDate(string Input, out DateTime Date)
         {
             Date = DateTime.MinValue;
-            try
+            if (!string.IsNullOrEmpty(Input))
             {
-                Date = new DateTime(Convert.ToInt32(Input.Substring(0, 4)), Convert.ToInt32(Input.Substring(4, 2)), Convert.ToInt32(Input.Substring(6, 2)));
-            }
-            catch
-            {
+                try
+                {
+                    Date = new DateTime(Convert.ToInt32(Input.Substring(0, 4)), Convert.ToInt32(Input.Substring(4, 2)), Convert.ToInt32(Input.Substring(6, 2)));
+                }
+                catch
+                {
+                }
             }
         }
     }

@@ -1,0 +1,92 @@
+Arizona Diambondbacks,ARI
+Atlanta Braves,ATL|MLN|BSN
+Baltimore Orioles,BAL|SLA|MLA
+Boston Red Sox,BOS
+Chicago Cubs,CHN
+Chicago White Sox,CHA
+Cincinnati Reds,CIN|CN2
+Cleveland Indians,CLE
+Colorado Rockies,COL
+Detroit Tigers,DET
+Houston Astros,HOU
+Kansas City Royals,KCA
+Los Angeles Angels of Anaheim,ANA|CAL|LAA
+Los Angeles Dodgers,LAN|BRO|BR3
+Miami Marlins,MIA|FLO
+Milwaukee Brewers,MIL|SE1
+Minnesota Twins,MIN|WS1
+New York Mets,NYN
+New York Yankees,NYA
+Oakland Athletics,OAK|KC1|PHA
+Philadelphia Phillies,PHI
+Pittsburgh Pirates,PIT|PT1
+Saint Louis Cardinals,SLN
+San Diego Padres,SDN
+San Francisco Giants,SFN|NY1
+Seattle Mariners,SEA
+Tampa Bay Rays,TBA
+Texas Rangers,TEX|WS2
+Toronto Blue Jays,TOR
+Washington Nationals,WAS|MON
+Altoona Mountain Citys,ALT
+Baltimore Monumentals,BLU
+Balitmore Orioles (Early AL),BLA
+Baltimore Orioles (AA-NL),BLN|BL2|BL3
+Baltimore Terrapins,BLF
+Boston Reds (PL-AA),BS2|BSP
+Boston Reds (UA),BSU
+Brooklyn Gladiators,BRP
+Brooklyn Tip-Tops,BRF
+Brooklyn Ward's Wonders,BR4
+Buffalo Bisons (FL),BUF
+Buffalo Bisons (PL),BFP
+Buffalo Bisons (NL),BFN
+Chicago Pirates,CHP
+Chicago Whales,CHF
+Chicago/Pittsburgh (UL),CHU
+Cincinnati Outlaw Reds,CNU
+Cincinnati Reds (<1880),CN1
+Cincinnati Kelly's Killers,CN3
+Cleveland Blues,CL2
+Cleveland Infants,CLP
+Cleveland Spiders,CL4|CL3
+Columbus Buckeyes,CL5
+Columbus Solons,CL6
+Detroit Wolverines,DTN
+Hartford Dark Blues,HAR
+Indianapolis Blues,IN1
+Indianapolis Hoosiers (II),IN3|SL4
+Indianapolis Hoosiers (I),IN2
+Indianapolis Hoosiers (FL),IND
+Kansas City Cowboys (NL),KCN
+Kansas City Cowboys (AA),KC2
+Kansas City Packers,KCF
+Louisville Colonels,LS2|LS3
+Louisville Grays,LS1
+Milwaukee Grays,ML2
+New York Giants (PL),NYP
+New York Metropolitans,NY4
+New York Mutuals,NY3
+Newark Pepper,NEW
+Philadelphia Athletics (AA),PH4
+Philadelphia Athletics (PL),PHP
+Philadelphia Athletics (NL),PHN
+Philadelphia Keystones,PHU
+Pittsburgh Burghers,PTP
+Pittsburgh Rebels,PTF
+Providence Greys,PRO
+Rochester Broncos,ROC
+Rochester Broncos (AA),RC2
+Saint Louis Brown Stockings,SL3
+Saint Louis Maroons (UA-NL),SLU|SL5
+Saint Louis Terriers,SLF
+Syracuse Stars (AA),SR2
+Syracuse Stars (NL),SR1
+Toledo Blue Stockings,TL1
+Toledo Maumees,TL2
+Troy Trojans,TRN
+Washington Nationals (1886-9),WS8
+Washington Nationals (UA),WSU
+Washington Senators (AA-BL),WS9|WSN
+Washington Statesman,WS7
+Worcester Ruby Legs,WOR

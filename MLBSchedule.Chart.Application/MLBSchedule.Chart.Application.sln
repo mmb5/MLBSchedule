@@ -152,6 +152,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{668D4E1C-B
 		Data\2014sked.txt = Data\2014sked.txt
 		Data\2015sked.txt = Data\2015sked.txt
 		Data\2016sked.txt = Data\2016sked.txt
+		Data\format1877.txt = Data\format1877.txt
+		Data\format1878.txt = Data\format1878.txt
+		Data\format1879.txt = Data\format1879.txt
+		Data\format1880.txt = Data\format1880.txt
+		Data\format1881.txt = Data\format1881.txt
+		Data\format1882.txt = Data\format1882.txt
+		Data\format1883.txt = Data\format1883.txt
+		Data\format1884.txt = Data\format1884.txt
+		Data\format1885.txt = Data\format1885.txt
+		Data\format1886.txt = Data\format1886.txt
+		Data\format1887.txt = Data\format1887.txt
+		Data\format1888.txt = Data\format1888.txt
 		Data\format1889.txt = Data\format1889.txt
 		Data\format1890.txt = Data\format1890.txt
 		Data\format1891.txt = Data\format1891.txt
@@ -181,6 +193,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{668D4E1C-B
 		Data\format2012.txt = Data\format2012.txt
 		Data\format2013.txt = Data\format2013.txt
 		Data\formatall.txt = Data\formatall.txt
+		Data\teams.txt = Data\teams.txt
 	EndProjectSection
 EndProject
 Global

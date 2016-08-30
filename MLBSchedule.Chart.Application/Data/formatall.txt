@@ -1,3 +1,15 @@
+1877,format1877.txt
+1878,format1878.txt
+1879,format1879.txt
+1880,format1880.txt
+1881,format1881.txt
+1882,format1882.txt
+1883,format1883.txt
+1884,format1884.txt
+1885,format1885.txt
+1886,format1886.txt
+1887,format1887.txt
+1888,format1888.txt
 1889,format1889.txt
 1890,format1890.txt
 1891,format1891.txt
@@ -23,8 +35,8 @@
 1911,format1903.txt
 1912,format1903.txt
 1913,format1903.txt
-1914,format1903.txt
-1915,format1903.txt
+1914,format1914.txt
+1915,format1915.txt
 1916,format1903.txt
 1917,format1903.txt
 1918,format1903.txt

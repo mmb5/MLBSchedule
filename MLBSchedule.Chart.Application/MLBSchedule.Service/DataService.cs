@@ -11,6 +11,7 @@ namespace MLBSchedule.Service
     {
         private List<Game> games = new List<Game>();
         private List<Division> divisions = new List<Division>();
+
         public List<Game> Games { get { return games; } }
         public List<Division> Divisions { get { return divisions; } }
 
@@ -23,6 +24,11 @@ namespace MLBSchedule.Service
         public Game GetGame(DateTime Date, string Team, bool IsHome)
         {
             return games.Where(g => (g.Date == Date) && ((IsHome && (g.Home.Abbr == Team)) || (!IsHome && (g.Visitor.Abbr == Team)))).FirstOrDefault();
+        }
+
+        public IEnumerable<Game> GetGames(string Team)
+        {
+            return games.Where(g => (g.Home.Abbr == Team) || (g.Visitor.Abbr == Team));
         }
 
         public Division GetDivision(string Team)

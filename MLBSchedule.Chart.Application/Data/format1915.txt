@@ -1,0 +1,6 @@
+American League X,BOS|NYA|PHA|WS1,Boston|NY Yankees|Philadelphia|Washington,BO|NY|PA|WA,CCFFFF
+American League Y,CHA|CLE|DET|SLA,Chicago WS|Cleveland|Detroit|St. Louis,CW|CL|DE|SB,FFFFCC
+National League X,BSN|BRO|NY1|PHI,Boston|Brooklyn|NY Giants|Philadelphia,BB|BR|NG|PH,CCFFCC
+National League Y,CHN|CIN|PIT|SLN,Chicago Cubs|Cincinnati|Pittsburgh|St. Louis,CC|CI|PI|SC,CCCCFF
+Federal League X,BLF|BRF|BUF|NEW,Baltimore|Brooklyn|Buffalo|Newark,BA|BR|BU|NE,FFCCFF
+Federal League Y,CHF|KCF|PTF|SLF,Chicago|Kansas City|Pittsburgh|St. Louis,CH|KC|PI|SL,FFCCCC

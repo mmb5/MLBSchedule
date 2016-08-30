@@ -1,0 +1,6 @@
+National League X,BSN|NY1|PHI|PRO,Boston|New York|Philadelphia|Providence,BO|NY|PH|PR,CCFFCC
+National League Y,BFN|CHN|CL2|DTN,Buffalo|Chicago|Cleveland|Detroit,BU|CH|CL|DE,CCCCFF
+American Association X,BL2|BR3|NY4|PH4|PT1|WS7,Baltimore|Brooklyn|New York|Philadelphia|Pittsburgh|Washington,BA|BR|NY|PH|PI|WA,FFCCFF
+American Association Y,CN2|CL5|IN2|LS2|SL4|TL1,Cincinnati|Columbus|Indianapolis|Louisville|St. Louis|Toledo,CI|CO|IN|LI|SL|TO,CCFFFF
+Union Association X,BLU|BSU|PHU|WSU,Baltimore|Boston|Philadelphia|Washington,BA|BO|PH|WA,CC99FF
+Union Association Y,ALT|CHU|CNU|SLU,Altoona|Chicago|Cincinnati|St. Louis,AL|CH|CI|SL,99FFCC

@@ -1,0 +1,4 @@
+National League X,BSN|NY1|PHI|PRO,Boston|New York|Philadelphia|Providence,BO|NY|PH|PR,CCFFCC
+National League Y,BFN|CHN|CL2|DTN,Buffalo|Chicago|Cleveland|Detroit,BU|CH|CL|DE,CCCCFF
+American Association X,BL2|NY4|PH4|PT1,Baltimore|New York|Philadelphia|Pittsburgh,BA|NY|PH|PI,FFCCFF
+American Association Y,CN2|CL5|LS2|SL4,Cincinnati|Columbus|Louisville|St. Louis,CI|CO|LI|SL,CCFFFF
