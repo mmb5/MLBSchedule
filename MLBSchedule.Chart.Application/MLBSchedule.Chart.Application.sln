@@ -12,6 +12,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{668D4E1C-B62D-4469-A9E8-DE212B37E107}"
 	ProjectSection(SolutionItems) = preProject
 		.keep = .keep
+		Data\1876sked.txt = Data\1876sked.txt
 		Data\1877sked.txt = Data\1877sked.txt
 		Data\1878sked.txt = Data\1878sked.txt
 		Data\1879sked.txt = Data\1879sked.txt
@@ -152,6 +153,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{668D4E1C-B
 		Data\2014sked.txt = Data\2014sked.txt
 		Data\2015sked.txt = Data\2015sked.txt
 		Data\2016sked.txt = Data\2016sked.txt
+		Data\format1876.txt = Data\format1876.txt
 		Data\format1877.txt = Data\format1877.txt
 		Data\format1878.txt = Data\format1878.txt
 		Data\format1879.txt = Data\format1879.txt

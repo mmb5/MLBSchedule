@@ -1,0 +1,2 @@
+NL1,BSN|HAR|NY3|PHN,Boston|Hartford|New York|Philadelphia,BO|HA|NY|PH,CCFFCC
+NL2,CHN|CN1|LS1|SL3,Chicago|Cincinnati|Louisville|St. Louis,CH|CI|LO|SL,CCCCFF

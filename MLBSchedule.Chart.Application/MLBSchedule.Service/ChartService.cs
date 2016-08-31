@@ -32,11 +32,17 @@ namespace MLBSchedule.Service
                 lastSunday = lastSunday.AddDays(1);
             }
 
+            html.AppendLine($"<table><tr><td style=\"font-size: 14pt; font-weight: bold; text-align: center\">Major League Baseball Schedule for {firstMonday.Year}</td></tr>");
+            html.Append($"<tr><td>");
             foreach (var d in data.Divisions)
             {
                 html.AppendLine(GetDivisionBlock(d, firstMonday, lastSunday));
-                html.AppendLine("<br />");
+                html.AppendLine("</td></tr><tr><td>&nbsp;</td></tr>");
             }
+            html.AppendLine("</td></tr></table>");
+            html.AppendLine("<br />");
+            html.AppendLine("<p style=\"font-face: arial; font-size: 9pt; font-style: italic;\">");
+            html.AppendLine("The information used here was obtained free of charge from and is copyrighted by Retrosheet.  Interested parties may contact Retrosheet at 20 Sunset Rd., Newark, DE 19711.</p>");
 
             return html.ToString();
 
@@ -49,8 +55,9 @@ namespace MLBSchedule.Service
 
             //  Set the division row
             var color = Division.ColorMask;
+            var group = data.Groups.Where(g => g.Code == Division.Abbreviation).FirstOrDefault();
             html.AppendLine("<table><tr><td>&nbsp;</td>");
-            html.AppendLine($"<td style=\"background-color: {color}; text-align: center; {GetBorderStyle(true, true, true, true)}\" colspan={7 * Division.Teams.Count}>{Division.Abbreviation}</td>");
+            html.AppendLine($"<td style=\"background-color: {color}; text-align: center; {GetBorderStyle(true, true, true, true)}\" colspan={7 * Division.Teams.Count}>{group.Name}</td>");
             html.AppendLine("</tr>");
 
             //  Set the team row

@@ -17,7 +17,7 @@ namespace MLBSchedule.Chart.Application
         static void Main(string[] args)
         {
             dataPath = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"..\..\..\data");
-            //MakeSeasonCharts();
+            MakeSeasonCharts();
             MakeTeamSummaries();
             //Console.ReadLine();
         }
@@ -28,7 +28,7 @@ namespace MLBSchedule.Chart.Application
             var formats = fileService.ReadFormatPointerFile(Path.Combine(dataPath, "formatall.txt"));
             var groups = fileService.ReadGroupFile(Path.Combine(dataPath, "groups.txt"));
             var leagues = fileService.ReadLeagueFile(Path.Combine(dataPath, "leagues.txt"));
-            foreach (var y in formats.Where(k => (k.Key >= 1876) && (k.Key <= 2016)))
+            foreach (var y in formats.Where(k => (k.Key >= 1876) && (k.Key <= 1876)))
             {
                 Console.WriteLine(y.Key);
                 MakeChart(GetScheduleFile(y.Key), GetFormatFile(y.Value), y.Key, groups, leagues);
@@ -65,7 +65,7 @@ namespace MLBSchedule.Chart.Application
             var summaries = new List<TeamSummary>();
             var leagueSummaries = new List<LeagueSummary>();
 
-            foreach (var y in formats.Where(k => (k.Key >= 1877) && (k.Key <= 2016)))
+            foreach (var y in formats.Where(k => (k.Key >= 1876) && (k.Key <= 2016)))
             {
                 var schedule = fileService.ReadSchedule(GetScheduleFile(y.Key));
                 var division = fileService.ReadFormatFile(GetFormatFile(y.Value));

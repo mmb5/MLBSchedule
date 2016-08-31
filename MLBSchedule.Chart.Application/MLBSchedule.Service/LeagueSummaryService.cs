@@ -43,8 +43,8 @@ namespace MLBSchedule.Service
                     summary.MedianHomeGames = Median(set.Select(s => s.LongHomeGames));
                     summary.MedianRoadDays = Median(set.Select(s => s.LongRoadDays));
                     summary.MedianRoadGames = Median(set.Select(s => s.LongRoadGames));
-                    summary.TotalDHs = set.Sum(s => s.HomeDHs + s.RoadDHs);
-                    summary.MedianDHs = Median(set.Select(s => s.HomeDHs + s.RoadDHs));
+                    summary.TotalDHs = set.Sum(s => s.HomeDHs);
+                    summary.MedianDHs = Median(set.Select(s => s.HomeDHs));
                     summaries.Add(summary);
                 }
             }
