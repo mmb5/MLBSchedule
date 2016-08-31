@@ -193,6 +193,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{668D4E1C-B
 		Data\format2012.txt = Data\format2012.txt
 		Data\format2013.txt = Data\format2013.txt
 		Data\formatall.txt = Data\formatall.txt
+		Data\groups.txt = Data\groups.txt
+		Data\leagues.txt = Data\leagues.txt
 		Data\teams.txt = Data\teams.txt
 	EndProjectSection
 EndProject

@@ -17,6 +17,8 @@ namespace MLBSchedule.Model
         public Team Team;
         public string Code;
         public int Year;
+        public string League;
+        public string Group;
         public DateTime FirstDate;
         public DateTime LastDate;
         public Dictionary<DayOfWeek, int> HomeDates = new Dictionary<DayOfWeek, int>();

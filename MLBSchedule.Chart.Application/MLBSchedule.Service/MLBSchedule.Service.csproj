@@ -43,8 +43,9 @@
     <Compile Include="ChartService.cs" />
     <Compile Include="DataService.cs" />
     <Compile Include="FileService.cs" />
+    <Compile Include="LeagueSummaryService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SummaryService.cs" />
+    <Compile Include="TeamSummaryService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MBLSchedule.Model\MLBSchedule.Model.csproj">

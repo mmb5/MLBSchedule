@@ -11,14 +11,20 @@ namespace MLBSchedule.Service
     {
         private List<Game> games = new List<Game>();
         private List<Division> divisions = new List<Division>();
+        private List<Group> groups = new List<Group>();
+        private List<League> leagues = new List<League>();
 
         public List<Game> Games { get { return games; } }
         public List<Division> Divisions { get { return divisions; } }
+        public List<Group> Groups { get { return groups; } }
+        public List<League> Leagues { get { return leagues; } }
 
-        public DataService(List<Game> Games, List<Division> Divisions)
+        public DataService(List<Game> Games, List<Division> Divisions, List<Group> Groups, List<League> Leagues)
         {
             games = Games;
             divisions = Divisions;
+            groups = Groups;
+            leagues = Leagues;
         }
 
         public Game GetGame(DateTime Date, string Team, bool IsHome)
@@ -50,6 +56,11 @@ namespace MLBSchedule.Service
         public int GetGameCountForDayAndSite(string Team, DayOfWeek Day, bool IsHome)
         {
             return GetGamesForDayAndSite(Team, Day, IsHome).Select(d => d.Date).Count();
+        }
+
+        public Group GetGroupForCode(string Code)
+        {
+            return groups.Where(g => g.Code == Code).FirstOrDefault();
         }
 
         public int[] GetLongestStand(string Team, bool IsHome)

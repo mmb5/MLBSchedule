@@ -1,0 +1,6 @@
+AL,American League
+NL,National League
+AA,American Association
+UA,Union Association
+PL,Players' League
+FL,Federal League

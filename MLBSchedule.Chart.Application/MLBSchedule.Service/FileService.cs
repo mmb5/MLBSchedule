@@ -70,6 +70,41 @@ namespace MLBSchedule.Service
             return list;
         }
 
+        public List<Group> ReadGroupFile(string Filename)
+        {
+            var list = new List<Group>();
+            using (StreamReader sr = new StreamReader(Filename))
+            {
+                while (!sr.EndOfStream)
+                {
+                    var input = sr.ReadLine().Split(',');
+                    var group = new Group();
+                    group.Code = input[0];
+                    group.Name = input[1];
+                    group.LeagueCode = input[2];
+                    list.Add(group);
+                }
+            }
+            return list;
+        }
+
+        public List<League> ReadLeagueFile(string Filename)
+        {
+            var list = new List<League>();
+            using (StreamReader sr = new StreamReader(Filename))
+            {
+                while (!sr.EndOfStream)
+                {
+                    var input = sr.ReadLine().Split(',');
+                    var league = new League();
+                    league.Code = input[0];
+                    league.Name = input[1];
+                    list.Add(league);
+                }
+            }
+            return list;
+        }
+
         private Game ParseGame(string Input)
         {
             var input = Input.Replace("\"", "");

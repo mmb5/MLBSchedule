@@ -1,4 +1,4 @@
-NLE,BSN|NY1|PHI|WS8,Boston|New York|Philadelphia|Washington,BO|NY|PH|WA,CCFFCC
-NLW,CHN|CL4|IN3|PIT,Chicago|Cleveland|Indianapolis|Pittsburgh,CH|CL|IN|PI,CCCCFF
-AAE,BL2|BR3|CL6|PH4,Baltimore|Brooklyn|Columbus|Philadelphia,BA|BR|CO|PH,FFCCFF
-AAW,CN2|KC2|LS2|SL4,Cincinnati|Kansas City|Louisville|St. Louis,CI|KC|LO|SL,FFFFCC
+NL1,BSN|NY1|PHI|WS8,Boston|New York|Philadelphia|Washington,BO|NY|PH|WA,CCFFCC
+NL2,CHN|CL4|IN3|PIT,Chicago|Cleveland|Indianapolis|Pittsburgh,CH|CL|IN|PI,CCCCFF
+AA1,BL2|BR3|CL6|PH4,Baltimore|Brooklyn|Columbus|Philadelphia,BA|BR|CO|PH,FFCCFF
+AA2,CN2|KC2|LS2|SL4,Cincinnati|Kansas City|Louisville|St. Louis,CI|KC|LO|SL,FFFFCC

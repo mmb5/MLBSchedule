@@ -7,7 +7,7 @@ using MLBSchedule.Model;
 
 namespace MLBSchedule.Service
 {
-    public class SummaryService
+    public class TeamSummaryService
     {
         private DataService data;
 
@@ -30,11 +30,14 @@ namespace MLBSchedule.Service
 
             foreach (var div in data.Divisions)
             {
+                var group = data.GetGroupForCode(div.Abbreviation);
                 foreach (var city in div.Teams)
                 {
                     var games = data.GetGames(city);
                     var summary = new TeamSummary();
                     summary.Team = Teams.Where(t => t.Codes.Contains(city)).FirstOrDefault();
+                    summary.Group = group.Code;
+                    summary.League = group.LeagueCode;
                     summary.Year = firstMonday.Year;
                     summary.Code = city;
                     summary.FirstDate = games.Min(m => m.Date);
@@ -70,7 +73,7 @@ namespace MLBSchedule.Service
             var last = Summaries.Max(y => y.Year);
 
             html.AppendLine("<table>");
-            html.AppendLine($"<tr><td colspan=41 style=\"font-size: 14pt; font-weight: bold; border-style: none\">Schedule Summary for {Team.Franchise}</td></tr>");
+            html.AppendLine($"<tr><td colspan=43 style=\"font-size: 14pt; font-weight: bold; border-style: none\">Schedule Summary for {Team.Franchise}</td></tr>");
             html.AppendLine(GetHeader());
             for (int year = first; year <= last; year++)
             {
@@ -82,7 +85,6 @@ namespace MLBSchedule.Service
             }
             html.AppendLine("</table>");
 
-
             return html.ToString();
         }
 
@@ -91,7 +93,7 @@ namespace MLBSchedule.Service
             var html = new StringBuilder();
 
             html.Append("<tr>");
-            html.Append("<td colspan=7>&nbsp;</td>");
+            html.Append("<td colspan=9>&nbsp;</td>");
             html.Append($"<td style=\"{GetBorderStyle(true, true, true, false)}\" colspan=14>Dates</td>");
             html.Append($"<td style=\"{GetBorderStyle(true, true, true, false)}\" colspan=14>Games</td>");
             html.Append($"<td style=\"{GetBorderStyle(true, true, true, false)}\" colspan=4>Longest Stand</td>");
@@ -99,7 +101,7 @@ namespace MLBSchedule.Service
             html.Append("</tr>");
 
             html.Append("<tr>");
-            html.Append("<td colspan=7>&nbsp;</td>");
+            html.Append("<td colspan=9>&nbsp;</td>");
             html.Append($"<td style=\"{GetBorderStyle(true, true, false, false)}\" colspan=7>Home</td>");
             html.Append($"<td style=\"{GetBorderStyle(true, true, false, false)}\" colspan=7>Road</td>");
             html.Append($"<td style=\"{GetBorderStyle(true, true, false, false)}\" colspan=7>Home</td>");
@@ -112,6 +114,8 @@ namespace MLBSchedule.Service
             html.Append("<tr>");
             html.Append($"<td style=\"{GetBorderStyle(true, false, true, true)} min-width: 3em;\">Year</td>");
             html.Append($"<td style=\"{GetBorderStyle(false, false, true, true)} min-width: 3em;\">Code</td>");
+            html.Append($"<td style=\"{GetBorderStyle(false, false, true, true)} min-width: 3em;\">League</td>");
+            html.Append($"<td style=\"{GetBorderStyle(false, false, true, true)} min-width: 3em;\">Group</td>");
             html.Append($"<td style=\"{GetBorderStyle(false, false, true, true)} min-width: 3em;\">Games</td>");
             html.Append($"<td style=\"{GetBorderStyle(false, false, true, true)} min-width: 5em;\">First</td>");
             html.Append($"<td style=\"{GetBorderStyle(false, false, true, true)} min-width: 5em;\">Last</td>");
@@ -144,9 +148,12 @@ namespace MLBSchedule.Service
         {
             var html = new StringBuilder();
             var color = Summary.Year % 10 < 5 ? "white" : "whitesmoke";
+
             html.Append($"<tr style=\"background-color: {color}\">");
             html.Append($"<td style=\"{GetBorderStyle(true, false, IsFirst, IsLast)}\">{Summary.Year}</td>");
             html.Append($"<td style=\"{GetBorderStyle(false, false, IsFirst, IsLast)}\">{Summary.Code}</td>");
+            html.Append($"<td style=\"{GetBorderStyle(false, false, IsFirst, IsLast)}\">{Summary.League}</td>");
+            html.Append($"<td style=\"{GetBorderStyle(false, false, IsFirst, IsLast)}\">{Summary.Group}</td>");
             html.Append($"<td style=\"{GetBorderStyle(false, false, IsFirst, IsLast)}\">{Summary.TotalHomeGames + Summary.TotalRoadGames}</td>");
             html.Append($"<td style=\"{GetBorderStyle(false, false, IsFirst, IsLast)}\">{Summary.FirstDate.ToString("ddd").Substring(0, 2)} {Summary.FirstDate.ToString("MM/dd")}</td>");
             html.Append($"<td style=\"{GetBorderStyle(false, false, IsFirst, IsLast)}\">{Summary.LastDate.ToString("ddd").Substring(0, 2)} {Summary.LastDate.ToString("MM/dd")}</td>");
@@ -186,7 +193,6 @@ namespace MLBSchedule.Service
             html.Append($"<td style=\"{GetBorderStyle(false, false, IsFirst, IsLast)}\">{Summary.LongHomeDays}</td>");
             html.Append($"<td style=\"{GetBorderStyle(false, false, IsFirst, IsLast)}\">{Summary.HomeDHs}</td>");
             html.Append($"<td style=\"{GetBorderStyle(false, true, IsFirst, IsLast)}\">{Summary.RoadDHs}</td>");
-
 
             html.Append("</tr>");
             return html.ToString();

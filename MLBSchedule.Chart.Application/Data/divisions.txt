@@ -1,0 +1,19 @@
+ALE|American League East|AL
+ALC|American League Central|AL
+ALW|American League West|AL
+ALX|American League Group 1|AL
+ALY|American League Group 2|AL
+NLE|National League East|NL
+NLC|National League Central|NL
+NLW|National League West|NL
+NLX|National League Group 1|NL
+NLY|National League Group 2|NL
+AAX|American Association Group 1|AA
+AAY|American Association Group 2|AA
+AAZ|American Association Group 3|AA
+UAX|Union Association Group 1|UA
+UAY|Union Association Group 2|UA
+PLX|Players' League Group 1|PL
+PLY|Players' League Group 2|PL
+FLX|Federal League Group 1|FL
+FLY|Federal League Group 2|FL

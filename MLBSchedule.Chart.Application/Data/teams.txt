@@ -20,7 +20,7 @@ New York Yankees,NYA
 Oakland Athletics,OAK|KC1|PHA
 Philadelphia Phillies,PHI
 Pittsburgh Pirates,PIT|PT1
-Saint Louis Cardinals,SLN
+Saint Louis Cardinals,SLN|SL4
 San Diego Padres,SDN
 San Francisco Giants,SFN|NY1
 Seattle Mariners,SEA
@@ -55,7 +55,7 @@ Columbus Solons,CL6
 Detroit Wolverines,DTN
 Hartford Dark Blues,HAR
 Indianapolis Blues,IN1
-Indianapolis Hoosiers (II),IN3|SL4
+Indianapolis Hoosiers (II),IN3|SL5|SLU
 Indianapolis Hoosiers (I),IN2
 Indianapolis Hoosiers (FL),IND
 Kansas City Cowboys (NL),KCN
@@ -78,7 +78,6 @@ Providence Greys,PRO
 Rochester Broncos,ROC
 Rochester Broncos (AA),RC2
 Saint Louis Brown Stockings,SL3
-Saint Louis Maroons (UA-NL),SLU|SL5
 Saint Louis Terriers,SLF
 Syracuse Stars (AA),SR2
 Syracuse Stars (NL),SR1

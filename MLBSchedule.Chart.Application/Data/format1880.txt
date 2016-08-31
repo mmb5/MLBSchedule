@@ -1,2 +1,2 @@
-National League X,BSN|PRO|TRN|WOR,Boston|Providence|Troy|Worcester,BO|PR|TR|WO,CCFFCC
-National League Y,BFN|CHN|CN1|CL2,Buffalo|Chicago|Cincinnati|Cleveland,BU|CH|CI|CL,CCCCFF
+NL1,BSN|PRO|TRN|WOR,Boston|Providence|Troy|Worcester,BO|PR|TR|WO,CCFFCC
+NL2,BFN|CHN|CN1|CL2,Buffalo|Chicago|Cincinnati|Cleveland,BU|CH|CI|CL,CCCCFF

@@ -26,19 +26,22 @@ namespace MLBSchedule.Chart.Application
         {
             var fileService = new FileService();
             var formats = fileService.ReadFormatPointerFile(Path.Combine(dataPath, "formatall.txt"));
-            foreach (var y in formats.Where(k => (k.Key >= 1888) && (k.Key <= 2016)))
+            var groups = fileService.ReadGroupFile(Path.Combine(dataPath, "groups.txt"));
+            var leagues = fileService.ReadLeagueFile(Path.Combine(dataPath, "leagues.txt"));
+            foreach (var y in formats.Where(k => (k.Key >= 1876) && (k.Key <= 2016)))
             {
-                MakeChart(GetScheduleFile(y.Key), GetFormatFile(y.Value), y.Key);
+                Console.WriteLine(y.Key);
+                MakeChart(GetScheduleFile(y.Key), GetFormatFile(y.Value), y.Key, groups, leagues);
             }
         }
 
-        static private void MakeChart(string ScheduleFile, string FormatFile, int Year)
+        static private void MakeChart(string ScheduleFile, string FormatFile, int Year, List<Group> groups, List<League> leagues)
         {
             var fileService = new FileService();
             var schedule = fileService.ReadSchedule(ScheduleFile);
             var division = fileService.ReadFormatFile(FormatFile);
 
-            var dataService = new DataService(schedule, division);
+            var dataService = new DataService(schedule, division, groups, leagues);
             var chartService = new ChartService();
             var chart = chartService.Get(dataService);
 
@@ -53,18 +56,24 @@ namespace MLBSchedule.Chart.Application
         static private void MakeTeamSummaries()
         {
             var fileService = new FileService();
-            var summaryService = new SummaryService();
+            var summaryService = new TeamSummaryService();
+            var leagueSummaryService = new LeagueSummaryService();
             var formats = fileService.ReadFormatPointerFile(Path.Combine(dataPath, "formatall.txt"));
             var teams = fileService.ReadTeamFile(Path.Combine(dataPath, "teams.txt"));
+            var groups = fileService.ReadGroupFile(Path.Combine(dataPath, "groups.txt"));
+            var leagues = fileService.ReadLeagueFile(Path.Combine(dataPath, "leagues.txt"));
             var summaries = new List<TeamSummary>();
+            var leagueSummaries = new List<LeagueSummary>();
 
             foreach (var y in formats.Where(k => (k.Key >= 1877) && (k.Key <= 2016)))
             {
                 var schedule = fileService.ReadSchedule(GetScheduleFile(y.Key));
                 var division = fileService.ReadFormatFile(GetFormatFile(y.Value));
-                var dataService = new DataService(schedule, division);
+                var dataService = new DataService(schedule, division, groups, leagues);
                 Console.WriteLine(y.Key);
-                summaries.AddRange(summaryService.Get(dataService, teams));
+                var set = summaryService.Get(dataService, teams);
+                summaries.AddRange(set);
+                leagueSummaries.AddRange(leagueSummaryService.Get(set));
             }
 
             foreach (var t in summaries.Select(t => t.Team).Distinct())
@@ -87,6 +96,29 @@ namespace MLBSchedule.Chart.Application
                     }
                 }
             }
+
+            foreach (var l in leagueSummaries.Select(t => t.Code).Distinct())
+            {
+                var league = leagues.Where(q => q.Code == l).FirstOrDefault();
+                using (StreamWriter sw = new StreamWriter(Path.Combine(dataPath.Replace("data", "output"), "leaguesummaryXXX.html".Replace("XXX", league.Code))))
+                {
+                    try
+                    {
+                        var set = leagueSummaries.Where(f => (f != null) && (f.Code == l)).OrderBy(y => y.Year);
+                        if (set.Any())
+                        {
+                            sw.WriteLine("<html><style>h2 { font-family: Arial; font-size: 14pt; font-weight: bold; text-align: center} td { text-align: center; font-family: Arial; font-size: 9pt; border-spacing: 0px; padding: 0px; border-collapse: collapse; } tr { border-spacing: 0px; padding: 0px; border-collapse: collapse; } table { border-spacing: 0px; padding: 0px; border-collapse: collapse; }</style><body>");
+                            sw.WriteLine(leagueSummaryService.Coalesce(league, set));
+                            sw.WriteLine("</body></html>");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                    }
+                }
+            }
+
         }
 
         static private string GetScheduleFile(int Season)

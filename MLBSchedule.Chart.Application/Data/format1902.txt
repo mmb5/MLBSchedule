@@ -1,4 +1,4 @@
-ALE,BLA|BOS|PHA|WS1,Baltimore|Boston|Philadelphia|Washington,BL|BO|PA|WA,CCFFFF
-ALW,CHA|CLE|DET|SLA,Chicago WS|Cleveland|Detroit|St. Louis,CW|CL|DE|SB,FFFFCC
-NLE,BSN|BRO|NY1|PHI,Boston|Brooklyn|NY Giants|Philadelphia,BB|BR|NG|PH,CCFFCC
-NLW,CHN|CIN|PIT|SLN,Chicago Cubs|Cincinnati|Pittsburgh|St. Louis,CC|CI|PI|SC,CCCCFF
+AL1,BLA|BOS|PHA|WS1,Baltimore|Boston|Philadelphia|Washington,BL|BO|PA|WA,CCFFFF
+AL2,CHA|CLE|DET|SLA,Chicago WS|Cleveland|Detroit|St. Louis,CW|CL|DE|SB,FFFFCC
+NL1,BSN|BRO|NY1|PHI,Boston|Brooklyn|NY Giants|Philadelphia,BB|BR|NG|PH,CCFFCC
+NL2,CHN|CIN|PIT|SLN,Chicago Cubs|Cincinnati|Pittsburgh|St. Louis,CC|CI|PI|SC,CCCCFF
